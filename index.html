@@ -49,7 +49,7 @@
             font-size: 11px;
             letter-spacing: 6px;
             text-transform: uppercase;
-            color: #8a7355; /* Muted Bronze Accent */
+            color: #8a7355; /* Muted Bronze Brand Color */
             font-weight: 600;
             margin-bottom: 35px;
             display: block;
@@ -150,15 +150,15 @@
         }
 
         .tier-price {
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 600;
-            color: #111111;
+            color: #8a7355; /* Brand color pop for main prices */
             letter-spacing: 0.5px;
         }
 
         /* Curated Logistics/Add-ons Box */
         .addons-container {
-            border: 1px solid #111111;
+            border: 1px solid #8a7355; /* Framed in brand color */
             padding: 30px;
             background-color: #ffffff;
         }
@@ -177,7 +177,7 @@
         .addon-row:last-child { padding-bottom: 0; border-bottom: none; }
 
         .addon-name { font-weight: 500; }
-        .addon-price { font-weight: 600; color: #111111; }
+        .addon-price { font-weight: 600; color: #8a7355; /* Brand color pop for add-ons */ }
 
         /* Structural Guidelines Grid */
         .protocol-grid {
@@ -204,7 +204,7 @@
         }
 
         .highlight-text {
-            color: #111111;
+            color: #8a7355; /* Brand color pop for critical timeline and fee rules */
             font-weight: 600;
         }
 
@@ -238,12 +238,15 @@
             body { padding: 15px 10px; }
             .container { padding: 45px 25px; }
             .brand-name { font-size: 21px; letter-spacing: 8px; }
+            
+            /* Clean vertical stack layout */
             .tier-card {
                 grid-template-columns: 1fr;
                 gap: 15px;
             }
             .tier-number { display: none; }
             .tier-price-box { text-align: left; margin-top: 5px; }
+            
             .protocol-grid { grid-template-columns: 1fr; gap: 25px; }
             .brand-footer { flex-direction: column; gap: 15px; text-align: left; }
         }
@@ -258,7 +261,7 @@
             <h1 class="brand-name">Liberty Picture</h1>
             <span class="brand-subtitle">Call to Bar Price Guide</span>
             <p class="brand-intro">
-                Professional studio portrait sessions for newly called lawyers celebrating their milestone and enrollment at the Supreme Court.
+                Professional portrait sessions for newly called lawyers celebrating their milestone and enrollment at the Supreme Court.
             </p>
         </header>
 
@@ -371,7 +374,7 @@
                     <span class="addon-name">Family Session (Off-site location without backdrop)</span>
                     <span class="addon-price">₦250,000</span>
                 </div>
-                <div class="addon-row" style="margin-top: 10px; border-top: 1px solid #111111; padding-top: 15px;">
+                <div class="addon-row" style="margin-top: 10px; border-top: 1px solid #8a7355; padding-top: 15px;">
                     <span class="addon-name">Additional Retouched Image Portfolio File</span>
                     <span class="addon-price">₦10,000 / picture</span>
                 </div>
