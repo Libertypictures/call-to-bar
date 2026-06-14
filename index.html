@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call to Bar Price Guide | Liberty Picture</title>
+    <style>
+        /* Modern Editorial Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Century Gothic", "Futura", -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f6f5f2; /* Warm Alabaster */
+            color: #111111;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            padding: 60px 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 80px 70px;
+            border: 1px solid #e2e0da;
+        }
+
+        /* Header Section Layout */
+        .brand-header {
+            margin-bottom: 70px;
+            text-align: left;
+        }
+
+        .brand-name {
+            font-size: 28px;
+            letter-spacing: 12px;
+            text-transform: uppercase;
+            font-weight: 400;
+            color: #111111;
+            line-height: 1.2;
+            margin-bottom: 8px;
+        }
+
+        .brand-subtitle {
+            font-size: 11px;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: #8a7355; /* Muted Bronze Accent */
+            font-weight: 600;
+            margin-bottom: 35px;
+            display: block;
+        }
+
+        .brand-intro {
+            font-size: 14px;
+            color: #444444;
+            max-width: 580px;
+            line-height: 1.7;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        /* Section Architecture */
+        .section-block {
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 14px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: #111111;
+            font-weight: 600;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #111111;
+            margin-bottom: 30px;
+        }
+
+        .section-meta {
+            font-size: 13px;
+            color: #777777;
+            font-style: italic;
+            margin-top: -20px;
+            margin-bottom: 25px;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        /* Pricing Card Grid Structure */
+        .tier-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .tier-card {
+            display: grid;
+            grid-template-columns: 60px 1fr 180px;
+            padding: 25px 0;
+            border-bottom: 1px solid #e2e0da;
+            align-items: start;
+        }
+
+        .tier-card:last-child {
+            border-bottom: none;
+        }
+
+        .tier-number {
+            font-size: 13px;
+            font-weight: 600;
+            color: #8a7355;
+            letter-spacing: 1px;
+        }
+
+        .tier-meta h3 {
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+            color: #111111;
+            margin-bottom: 10px;
+        }
+
+        .tier-details {
+            list-style: none;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 13.5px;
+            color: #444444;
+        }
+
+        .tier-details li {
+            margin-bottom: 6px;
+            position: relative;
+            padding-left: 14px;
+        }
+
+        .tier-details li::before {
+            content: "▪";
+            font-size: 8px;
+            position: absolute;
+            left: 0;
+            top: 1px;
+            color: #8a7355;
+        }
+
+        .tier-price-box {
+            text-align: right;
+        }
+
+        .tier-price {
+            font-size: 18px;
+            font-weight: 600;
+            color: #111111;
+            letter-spacing: 0.5px;
+        }
+
+        /* Curated Logistics/Add-ons Box */
+        .addons-container {
+            border: 1px solid #111111;
+            padding: 30px;
+            background-color: #ffffff;
+        }
+
+        .addon-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-size: 13.5px;
+            padding: 10px 0;
+            border-bottom: 1px solid #e2e0da;
+            color: #333333;
+        }
+
+        .addon-row:first-child { padding-top: 0; }
+        .addon-row:last-child { padding-bottom: 0; border-bottom: none; }
+
+        .addon-name { font-weight: 500; }
+        .addon-price { font-weight: 600; color: #111111; }
+
+        /* Structural Guidelines Grid */
+        .protocol-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px 30px;
+        }
+
+        .protocol-item h4 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #111111;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .protocol-item p {
+            font-size: 13px;
+            color: #555555;
+            text-align: justify;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+        }
+
+        .highlight-text {
+            color: #111111;
+            font-weight: 600;
+        }
+
+        /* Minimal Footer Layout */
+        .brand-footer {
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid #111111;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-size: 12px;
+            color: #555555;
+        }
+
+        .footer-note {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            color: #111111;
+        }
+
+        .footer-contact a {
+            color: #8a7355;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            body { padding: 15px 10px; }
+            .container { padding: 45px 25px; }
+            .brand-name { font-size: 21px; letter-spacing: 8px; }
+            .tier-card {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            .tier-number { display: none; }
+            .tier-price-box { text-align: left; margin-top: 5px; }
+            .protocol-grid { grid-template-columns: 1fr; gap: 25px; }
+            .brand-footer { flex-direction: column; gap: 15px; text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Header Architecture -->
+        <header class="brand-header">
+            <h1 class="brand-name">Liberty Picture</h1>
+            <span class="brand-subtitle">Call to Bar Price Guide</span>
+            <p class="brand-intro">
+                Professional studio portrait sessions for newly called lawyers celebrating their milestone and enrollment at the Supreme Court.
+            </p>
+        </header>
+
+        <!-- Individual Sessions Segment -->
+        <section class="section-block">
+            <h2 class="section-title">Individual Portfolios</h2>
+            <p class="section-meta">Exclusively focused on the candidate. Perfect for traditional ceremonial legal attire and precise corporate changes.</p>
+            
+            <div class="tier-grid">
+                
+                <!-- Package 1 -->
+                <div class="tier-card">
+                    <div class="tier-number">01 //</div>
+                    <div class="tier-meta">
+                        <h3>The Brief Session</h3>
+                        <ul class="tier-details">
+                            <li>Focused strictly on full ceremonial attire (Wig, Gown, and Tab)</li>
+                            <li>Maximum session duration: 1 Hour</li>
+                            <li>4 signature retouched digital portraits</li>
+                            <li>Full download of unwatermarked JPEG proofs for client selection</li>
+                            <li>Free online gallery hosting valid for 1 month</li>
+                        </ul>
+                    </div>
+                    <div class="tier-price-box">
+                        <span class="tier-price">₦80,000</span>
+                    </div>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="tier-card">
+                    <div class="tier-number">02 //</div>
+                    <div class="tier-meta">
+                        <h3>The Counsel Session</h3>
+                        <ul class="tier-details">
+                            <li>Look 1: Ceremonial Legal Robes | Look 2: Premium Corporate or Formal wear</li>
+                            <li>Maximum session duration: 1 Hour</li>
+                            <li>8 signature retouched digital portraits</li>
+                            <li>Full download of unwatermarked JPEG proofs for client selection</li>
+                            <li>Free online gallery hosting valid for 1 month</li>
+                        </ul>
+                    </div>
+                    <div class="tier-price-box">
+                        <span class="tier-price">₦120,000</span>
+                    </div>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="tier-card">
+                    <div class="tier-number">03 //</div>
+                    <div class="tier-meta">
+                        <h3>The Silk Session</h3>
+                        <ul class="tier-details">
+                            <li>Allows multi-dimensional wardrobe variations (Robes, Corporate, and Traditional)</li>
+                            <li>Maximum session duration: 1 Hour 20 Minutes</li>
+                            <li>12 signature retouched digital portraits</li>
+                            <li>Premium signature flash drive containing all final media</li>
+                            <li>Full download of unwatermarked JPEG proofs for client selection</li>
+                            <li>Free online gallery hosting valid for 1 month</li>
+                            <li>Comprehensive visual curation & pre-shoot planning</li>
+                        </ul>
+                    </div>
+                    <div class="tier-price-box">
+                        <span class="tier-price">₦170,000</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Family Session Segment -->
+        <section class="section-block">
+            <h2 class="section-title">Candidate & Family</h2>
+            <p class="section-meta">Documenting your milestone alongside immediate and extended family structures.</p>
+            
+            <div class="tier-grid">
+                <div class="tier-card">
+                    <div class="tier-number">04 //</div>
+                    <div class="tier-meta">
+                        <h3>The Bencher Family Package</h3>
+                        <ul class="tier-details">
+                            <li>Maximum of 2 distinct concepts</li>
+                            <li>15 signature retouched digital portraits in total (includes individual configurations)</li>
+                            <li>Includes one premium 12×15 custom photo frame for your home or chambers</li>
+                            <li>Premium signature flash drive containing all final media</li>
+                            <li>Full download of unwatermarked JPEG proofs for client selection</li>
+                            <li>Free online gallery hosting valid for 1 month</li>
+                            <li>Optional pre-shoot concept & style guidance</li>
+                        </ul>
+                    </div>
+                    <div class="tier-price-box">
+                        <span class="tier-price">₦250,000</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Logistics & Customizations -->
+        <section class="section-block">
+            <h2 class="section-title">Logistics & Custom Additions</h2>
+            <div class="addons-container">
+                <div class="addon-row">
+                    <span class="addon-name">Individual Session (Off-site / Hotel / Court Premises)</span>
+                    <span class="addon-price">₦200,000 / look</span>
+                </div>
+                <div class="addon-row">
+                    <span class="addon-name">Family Session (Off-site location with backdrop setup)</span>
+                    <span class="addon-price">₦300,000</span>
+                </div>
+                <div class="addon-row">
+                    <span class="addon-name">Family Session (Off-site location without backdrop)</span>
+                    <span class="addon-price">₦250,000</span>
+                </div>
+                <div class="addon-row" style="margin-top: 10px; border-top: 1px solid #111111; padding-top: 15px;">
+                    <span class="addon-name">Additional Retouched Image Portfolio File</span>
+                    <span class="addon-price">₦10,000 / picture</span>
+                </div>
+                <div class="addon-row">
+                    <span class="addon-name">Express 24-Hour Digital Turnaround Delivery</span>
+                    <span class="addon-price">+₦30,000</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Structural Protocol / Guidelines -->
+        <section class="section-block">
+            <h2 class="section-title">Studio Protocol</h2>
+            <div class="protocol-grid">
+                
+                <div class="protocol-item">
+                    <h4>Retainer & Settlement</h4>
+                    <p>A <span class="highlight-text">non-refundable retainer fee of 70%</span> is strictly required to lock down your specific date and hour during the call week. The remaining <span class="highlight-text">30% balance</span> must be settled completely on the immediate day of your session.</p>
+                </div>
+
+                <div class="protocol-item">
+                    <h4>Punctuality & Scheduling</h4>
+                    <p>To preserve our tight scheduling matrix during the call calendar, time management is paramount. Arrivals extending <span class="highlight-text">beyond 20 minutes late</span> will automatically attract a static <span class="highlight-text">late fee of ₦15,000</span>.</p>
+                </div>
+
+                <div class="protocol-item">
+                    <h4>Selection & Turnaround</h4>
+                    <p>Unedited proofs are uploaded directly to Pixieset for your secure selection, or chosen directly at the studio post-session. Final polished media is processed within <span class="highlight-text">2 to 4 working days</span>. Unedited RAW files are strictly withheld but can be purchased upon request.</p>
+                </div>
+
+                <div class="protocol-item">
+                    <h4>Licensing & Ownership</h4>
+                    <p>Clients receive a personal-use license for self-printing and digital publication. Liberty Picture retains legal copyright ownership for archive display. Exclusive usage waivers are subject to contract negotiations.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Minimal Footer -->
+        <footer class="brand-footer">
+            <span class="footer-note">Liberty Picture © 2026</span>
+            <div class="footer-contact">
+                Email: <a href="mailto:visualsliberty@gmail.com">visualsliberty@gmail.com</a> &nbsp;|&nbsp; Instagram: @Libertypicture
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>
