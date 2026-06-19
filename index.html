@@ -22,11 +22,12 @@
         }
 
         .container {
-            max-width: 850px;
+            max-width: 900px; /* Slightly wider to accommodate side-by-side cards */
             margin: 0 auto;
             background-color: #ffffff;
             padding: 80px 70px;
             border: 1px solid #e2e0da;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02); /* Soft depth for modern feel */
         }
 
         /* Header Section Layout */
@@ -65,7 +66,7 @@
 
         /* Section Architecture */
         .section-block {
-            margin-bottom: 60px;
+            margin-bottom: 70px;
         }
 
         .section-title {
@@ -76,63 +77,69 @@
             font-weight: 600;
             padding-bottom: 12px;
             border-bottom: 2px solid #000000;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .section-meta {
             font-size: 13px;
             color: #000000;
             font-style: italic;
-            margin-top: -20px;
-            margin-bottom: 25px;
+            margin-top: -10px;
+            margin-bottom: 30px;
             font-family: -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
         }
 
-        /* Pricing Card Grid Structure */
+        /* 
+         * ==========================================
+         * SIDE-BY-SIDE PRICING CARDS
+         * ==========================================
+         */
         .tier-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
         }
 
         .tier-card {
-            display: grid;
-            grid-template-columns: 60px 1fr 180px;
-            padding: 25px 0;
-            border-bottom: 1px solid #e2e0da;
-            align-items: start;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #fdfdfc;
+            border: 1px solid #e2e0da;
+            padding: 35px 25px;
+            border-radius: 4px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-        .tier-card:last-child {
-            border-bottom: none;
+        .tier-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
         }
 
-        .tier-number {
-            font-size: 13px;
-            font-weight: 600;
-            color: #000000;
-            letter-spacing: 1px;
+        .tier-meta {
+            flex-grow: 1; /* Pushes the price box to the bottom */
         }
 
         .tier-meta h3 {
-            font-size: 15px;
+            font-size: 14px;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
+            letter-spacing: 2px;
             font-weight: 600;
-            color: #000000; /* Solid Black Package Titles */
-            margin-bottom: 10px;
+            color: #000000;
+            margin-bottom: 15px;
         }
 
         .tier-details {
             list-style: none;
             font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-            font-size: 13.5px;
-            color: #000000;
+            font-size: 13px;
+            color: #333333;
+            line-height: 1.5;
         }
 
         .tier-details li {
-            margin-bottom: 6px;
+            margin-bottom: 8px;
             position: relative;
             padding-left: 14px;
         }
@@ -142,12 +149,15 @@
             font-size: 8px;
             position: absolute;
             left: 0;
-            top: 1px;
+            top: 2px;
             color: #8a7355;
         }
 
         .tier-price-box {
-            text-align: right;
+            text-align: left;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e0da;
         }
 
         .tier-price {
@@ -157,11 +167,12 @@
             letter-spacing: 0.5px;
         }
 
-        /* Curated Logistics/Add-ons Box */
+        /* Curated Logistics/Add-ons Box (Kept Vertical for Readability) */
         .addons-container {
-            border: 1px solid #8a7355; /* Framed in brand color */
+            border: 1px solid #8a7355;
             padding: 30px;
             background-color: #ffffff;
+            border-radius: 4px;
         }
 
         .addon-row {
@@ -169,16 +180,16 @@
             justify-content: space-between;
             align-items: baseline;
             font-size: 13.5px;
-            padding: 10px 0;
-            border-bottom: 1px solid #e2e0da;
+            padding: 12px 0;
+            border-bottom: 1px dashed #e2e0da;
             color: #000000;
         }
 
         .addon-row:first-child { padding-top: 0; }
         .addon-row:last-child { padding-bottom: 0; border-bottom: none; }
 
-        .addon-name { font-weight: 500; }
-        .addon-price { font-weight: 600; color: #8a7355; /* Brand color pop for add-ons */ }
+        .addon-name { font-weight: 500; padding-right: 15px; }
+        .addon-price { font-weight: 600; color: #8a7355; white-space: nowrap; }
 
         /* Structural Guidelines Grid */
         .protocol-grid {
@@ -198,28 +209,24 @@
 
         .protocol-item p {
             font-size: 13px;
-            color: #000000;
+            color: #333333;
             text-align: justify;
             font-family: -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
         }
 
         .highlight-text {
-            color: #8a7355; /* Brand color pop for critical timeline and fee rules */
+            color: #8a7355; 
             font-weight: 600;
         }
 
-        /* 
-         * ==========================================
-         * FEMININE & ELEGANT CTA SECTION UPDATE
-         * ==========================================
-         */
+        /* CTA Section */
         .cta-section {
             margin: 70px 0 20px 0;
-            background-color: #f6f5f2; /* Soft warm alabaster background */
+            background-color: #f6f5f2; 
             padding: 55px 40px;
             text-align: center;
-            border-radius: 4px; /* Subtle softening of the overall box */
+            border-radius: 4px; 
         }
 
         .cta-heading {
@@ -248,7 +255,6 @@
             flex-wrap: wrap;
         }
 
-        /* Elegant rounded pill shapes for the buttons */
         .cta-btn-primary {
             display: inline-block;
             background-color: #8a7355;
@@ -260,7 +266,7 @@
             letter-spacing: 2px;
             text-decoration: none;
             border: 1px solid #8a7355;
-            border-radius: 40px; /* Pill Shape */
+            border-radius: 40px; 
             transition: all 0.3s ease;
             min-width: 170px;
         }
@@ -281,7 +287,7 @@
             letter-spacing: 2px;
             text-decoration: none;
             border: 1px solid #8a7355;
-            border-radius: 40px; /* Pill Shape */
+            border-radius: 40px; 
             transition: all 0.3s ease;
             min-width: 170px;
         }
@@ -315,22 +321,54 @@
             font-weight: 600;
         }
 
-        /* Mobile Optimization */
+        /* 
+         * ==========================================
+         * MOBILE OPTIMIZATION
+         * ==========================================
+         */
         @media (max-width: 768px) {
-            body { padding: 15px 10px; }
-            .container { padding: 45px 25px; }
-            .brand-name { font-size: 21px; letter-spacing: 8px; }
-            .tier-card {
-                grid-template-columns: 1fr;
-                gap: 15px;
+            body { 
+                padding: 0; 
+                background-color: #ffffff; /* Seamless full-bleed on mobile */
             }
-            .tier-number { display: none; }
-            .tier-price-box { text-align: left; margin-top: 5px; }
-            .protocol-grid { grid-template-columns: 1fr; gap: 25px; }
-            .cta-section { padding: 45px 20px; }
-            .cta-grid { flex-direction: column; gap: 12px; }
-            .cta-btn-primary, .cta-btn-secondary { width: 100%; border-radius: 40px; }
-            .brand-footer { flex-direction: column; gap: 15px; text-align: left; }
+            .container { 
+                padding: 40px 20px; 
+                border: none; 
+                box-shadow: none;
+            }
+            .brand-name { 
+                font-size: 24px; 
+                letter-spacing: 8px; 
+            }
+            .tier-grid { 
+                grid-template-columns: 1fr; /* Stacks cards vertically on phone */
+                gap: 20px;
+            }
+            .addon-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+            .protocol-grid { 
+                grid-template-columns: 1fr; 
+                gap: 30px; 
+            }
+            .cta-section { 
+                padding: 45px 20px; 
+            }
+            .cta-grid { 
+                flex-direction: column; 
+                gap: 12px; 
+            }
+            .cta-btn-primary, .cta-btn-secondary { 
+                width: 100%; 
+                text-align: center;
+            }
+            .brand-footer { 
+                flex-direction: column; 
+                gap: 15px; 
+                text-align: left; 
+            }
         }
     </style>
 </head>
@@ -343,7 +381,7 @@
             <h1 class="brand-name">Libertypictures</h1>
             <span class="brand-subtitle">Call to Bar Price Guide</span>
             <p class="brand-intro">
-                Commemorative legacy sessions for newly inducted solicitors and advocates.
+                Thanks for your interest in our work. Take a moment to review our session details and terms, then use the calendar below to secure your date
             </p>
         </header>
 
@@ -355,7 +393,6 @@
                 
                 <!-- Package 1 -->
                 <div class="tier-card">
-                    <div class="tier-number">01 //</div>
                     <div class="tier-meta">
                         <h3>The Brief</h3>
                         <ul class="tier-details">
@@ -371,7 +408,6 @@
 
                 <!-- Package 2 -->
                 <div class="tier-card">
-                    <div class="tier-number">02 //</div>
                     <div class="tier-meta">
                         <h3>The Counsel</h3>
                         <ul class="tier-details">
@@ -387,7 +423,6 @@
 
                 <!-- Package 3 -->
                 <div class="tier-card">
-                    <div class="tier-number">03 //</div>
                     <div class="tier-meta">
                         <h3>The Learned Friends</h3>
                         <ul class="tier-details">
@@ -411,7 +446,6 @@
             
             <div class="tier-grid">
                 <div class="tier-card">
-                    <div class="tier-number">04 //</div>
                     <div class="tier-meta">
                         <h3>The Bencher Family</h3>
                         <ul class="tier-details">
@@ -445,7 +479,7 @@
                     <span class="addon-name">Family Session (Off-site location without backdrop)</span>
                     <span class="addon-price">₦250,000</span>
                 </div>
-                <div class="addon-row" style="margin-top: 10px; border-top: 1px solid #8a7355; padding-top: 15px;">
+                <div class="addon-row" style="margin-top: 10px; border-top: 1px dashed #8a7355; padding-top: 15px;">
                     <span class="addon-name">Additional Retouched Image Portfolio File</span>
                     <span class="addon-price">₦10,000 / picture</span>
                 </div>
@@ -472,6 +506,11 @@
                 </div>
 
                 <div class="protocol-item">
+                    <h4>Cancellation & Rescheduling</h4>
+                    <p>Cancellations do not qualify for refunds. In the case of emergency cancellations or no-show retainer will be forfeited. This ensures fairness to other clients and respects our time and resources. One time rescheduling is allowed free of charge if requested at least <span class="highlight-text">24-48 hours</span> before session. Retainers are valid for 12 months under the right circumstances.</p>
+                </div>
+
+                <div class="protocol-item">
                     <h4>Selection & Turnaround</h4>
                     <p>Proofs are shared via a private Pixieset gallery for your selection. Final retouched media is delivered within 2 to 4 working days via a secure gallery. Unedited RAW files remain safely in our archives, though they can be purchased upon request.</p>
                 </div>
@@ -484,12 +523,26 @@
             </div>
         </section>
 
+        <!-- ========================================== -->
+        <!-- CALENDAR BOOKING SECTION                   -->
+        <!-- ========================================== -->
+        <section class="section-block" style="margin-top: 70px;">
+            <h2 class="section-title" style="text-align: center; border-bottom: none; margin-bottom: 20px;">Schedule Your Session</h2>
+            
+            <div style="border: 1px solid #e2e0da; background-color: #f6f5f2; border-radius: 4px; padding-top: 20px;">
+                <!-- Calendly inline widget begin -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/visualsliberty/studio-portraits?hide_event_type_details=1&hide_gdpr_banner=1&text_color=000000&primary_color=8a7355" style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Calendly inline widget end -->
+            </div>
+        </section>
+
         <!-- Modern & Elegant Contact/Booking Section -->
-        <div class="cta-section">
+        <div class="cta-section" style="margin-top: 30px;">
             <h3 class="cta-heading">Let's create something beautiful.</h3>
-            <p class="cta-text">Reach out to secure your date and discuss your vision.</p>
+            <p class="cta-text">Have questions before booking? Reach out to discuss your vision.</p>
             <div class="cta-grid">
-                <a href="https://wa.me/2349075170240" class="cta-btn-primary">Book via WhatsApp</a>
+                <a href="https://wa.me/2349075170240" class="cta-btn-primary">Message via WhatsApp</a>
                 <a href="https://ig.me/m/libertypicture" class="cta-btn-secondary">Instagram DM</a>
                 <a href="mailto:visualsliberty@gmail.com" class="cta-btn-secondary">Email Studio</a>
             </div>
