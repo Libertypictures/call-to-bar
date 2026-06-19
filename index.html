@@ -209,6 +209,87 @@
             font-weight: 600;
         }
 
+        /* 
+         * ==========================================
+         * FEMININE & ELEGANT CTA SECTION UPDATE
+         * ==========================================
+         */
+        .cta-section {
+            margin: 70px 0 20px 0;
+            background-color: #f6f5f2; /* Soft warm alabaster background */
+            padding: 55px 40px;
+            text-align: center;
+            border-radius: 4px; /* Subtle softening of the overall box */
+        }
+
+        .cta-heading {
+            color: #000000;
+            font-size: 22px;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            font-weight: 400;
+        }
+
+        .cta-text {
+            font-size: 13.5px;
+            color: #000000;
+            margin-bottom: 35px;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-grid {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* Elegant rounded pill shapes for the buttons */
+        .cta-btn-primary {
+            display: inline-block;
+            background-color: #8a7355;
+            color: #ffffff;
+            padding: 14px 38px;
+            font-size: 11.5px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+            border: 1px solid #8a7355;
+            border-radius: 40px; /* Pill Shape */
+            transition: all 0.3s ease;
+            min-width: 170px;
+        }
+
+        .cta-btn-primary:hover {
+            background-color: #756147;
+            border-color: #756147;
+        }
+
+        .cta-btn-secondary {
+            display: inline-block;
+            background-color: transparent;
+            color: #8a7355;
+            padding: 14px 38px;
+            font-size: 11.5px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+            border: 1px solid #8a7355;
+            border-radius: 40px; /* Pill Shape */
+            transition: all 0.3s ease;
+            min-width: 170px;
+        }
+
+        .cta-btn-secondary:hover {
+            background-color: #ffffff;
+        }
+
         /* Minimal Footer Layout */
         .brand-footer {
             margin-top: 80px;
@@ -246,6 +327,9 @@
             .tier-number { display: none; }
             .tier-price-box { text-align: left; margin-top: 5px; }
             .protocol-grid { grid-template-columns: 1fr; gap: 25px; }
+            .cta-section { padding: 45px 20px; }
+            .cta-grid { flex-direction: column; gap: 12px; }
+            .cta-btn-primary, .cta-btn-secondary { width: 100%; border-radius: 40px; }
             .brand-footer { flex-direction: column; gap: 15px; text-align: left; }
         }
     </style>
@@ -374,31 +458,42 @@
 
         <!-- Structural Protocol / Guidelines -->
         <section class="section-block">
-            <h2 class="section-title">Studio Protocol</h2>
+            <h2 class="section-title">Notes & Details</h2>
             <div class="protocol-grid">
                 
                 <div class="protocol-item">
-                    <h4>Retainer & Settlement</h4>
-                    <p>A <span class="highlight-text">non-refundable retainer fee of 70%</span> is strictly required to lock down your specific date and hour during the call week. The remaining <span class="highlight-text">30% balance</span> must be settled completely on the immediate day of your session.</p>
+                    <h4>Booking & Retainer</h4>
+                    <p>To officially reserve your session date and time during call week, a <span class="highlight-text">70% non-refundable retainer</span> is requested upon booking. We kindly ask that the remaining <span class="highlight-text">30% balance</span> is settled completely on the day of your session.</p>
                 </div>
 
                 <div class="protocol-item">
                     <h4>Punctuality & Scheduling</h4>
-                    <p>To preserve our seamless back-to-back calendar, sessions are strictly bound to their time limits: <span class="highlight-text">60 minutes</span> for packages 1 & 3, <span class="highlight-text">75 minutes</span> for package 2, and <span class="highlight-text">90 minutes</span> for family tiers. Arrivals extending <span class="highlight-text">beyond 20 minutes late</span> automatically attract a fee of <span class="highlight-text">₦15,000</span>.</p>
+                    <p>To ensure a seamless experience during our busiest season, sessions are thoughtfully paced: <span class="highlight-text">60 minutes</span> for The Brief & Learned Friends, <span class="highlight-text">75 minutes</span> for The Counsel, and <span class="highlight-text">90 minutes</span> for family tiers. To protect this schedule, arrivals extending <span class="highlight-text">beyond 20 minutes late</span> are gently subject to a <span class="highlight-text">₦15,000</span> adjustment.</p>
                 </div>
 
                 <div class="protocol-item">
                     <h4>Selection & Turnaround</h4>
-                    <p>Unedited proofs are uploaded directly to Pixieset or selected at the studio post-session. <span class="highlight-text">A full download of unwatermarked JPEG proofs is provided for client selection</span>. Final retouched media is delivered within 2 to 4 working days. Unedited RAW files are withheld but can be purchased upon request.</p>
+                    <p>Proofs are shared via a private Pixieset gallery for your selection. Final retouched media is delivered within 2 to 4 working days via a secure gallery. Unedited RAW files remain safely in our archives, though they can be purchased upon request.</p>
                 </div>
 
                 <div class="protocol-item">
                     <h4>Licensing & Ownership</h4>
-                    <p>Clients receive a personal-use license for self-printing and digital publication. <span class="highlight-text">Libertypictures</span> retains legal copyright ownership for archive display. Exclusive usage waivers are subject to contract negotiations.</p>
+                    <p>You receive a personal-use license for self-printing and digital sharing. <span class="highlight-text">Libertypictures</span> retains standard copyright ownership for portfolio curation, though privacy requests are always honored.</p>
                 </div>
 
             </div>
         </section>
+
+        <!-- Modern & Elegant Contact/Booking Section -->
+        <div class="cta-section">
+            <h3 class="cta-heading">Let's create something beautiful.</h3>
+            <p class="cta-text">Reach out to secure your date and discuss your vision.</p>
+            <div class="cta-grid">
+                <a href="https://wa.me/2349075170240" class="cta-btn-primary">Book via WhatsApp</a>
+                <a href="https://ig.me/m/libertypicture" class="cta-btn-secondary">Instagram DM</a>
+                <a href="mailto:visualsliberty@gmail.com" class="cta-btn-secondary">Email Studio</a>
+            </div>
+        </div>
 
         <!-- Minimal Footer -->
         <footer class="brand-footer">
